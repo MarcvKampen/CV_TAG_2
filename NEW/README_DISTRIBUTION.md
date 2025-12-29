@@ -4,13 +4,13 @@ This guide explains how to generate and distribute the Windows executable (`.exe
 
 ## Prerequisites
 1. This code must be hosted on a GitHub repository.
-2. The repository must measure visibility (private repositories have limited Action minutes).
+2. The repository must be public or have available Actions minutes (if private).
 
 ## How to Build
-You do not need a Windows computer to build the app. The "Continuous Integration" (CI/CD) system handles it for you.
+You do not need a Windows computer to build the app. The "Continuous Integration" (CI/CD) system handles it automatically.
 
 1.  **Push Changes**:
-    Simply commit and push your code changes to the `main` or `master` branch.
+    Commit and push your code changes to the `main` or `master` branch.
     ```bash
     git add .
     git commit -m "Update application code"
@@ -19,26 +19,26 @@ You do not need a Windows computer to build the app. The "Continuous Integration
 
 2.  **Wait for Build**:
     - Go to your repository on GitHub.
-    - Click the **"Actions"** tab.
-    - You will see a workflow named **"Build Windows App"** running.
-    - It takes about 2-5 minutes to complete.
+    - Click the **Actions** tab.
+    - Select the workflow named **Build Windows App**.
+    - Monitor progress until completion (typically 2-5 minutes).
 
 3.  **Download Executable**:
-    - Once the workflow shows a green checkmark (Success), click on it.
-    - Scroll down to the **"Artifacts"** section at the bottom.
-    - Click on **"RecruiteeTagger-Windows"** to download the zip file.
-    - Inside, you will find `RecruiteeTagger.exe`.
+    - Select the completed workflow run.
+    - Scroll to the **Artifacts** section at the bottom.
+    - Click **RecruiteeTagger-Windows** to download the archive.
+    - Extract the archive to find `RecruiteeTagger.exe`.
 
 ## How to Distribute
 1.  **First Run**:
-    - Unzip the downloaded file.
-    - Double-click `RecruiteeTagger.exe`.
-    - **Note**: Since this app is not "signed" with a paid certificate, Windows might show a "Windows protected your PC" warning.
-    - Tell users to click **"More info"** -> **"Run anyway"**.
+    - Extract the downloaded file.
+    - Execute `RecruiteeTagger.exe`.
+    - **Note**: As the application is not signed with a commercial certificate, Windows may display a "Windows protected your PC" warning.
+    - Instruct users to select **More info** followed by **Run anyway**.
 
 2.  **Configuration**:
-    - On the first run, the user will need to enter their configuration (API Keys) or place a `cv_processing_settings.json` file in the same folder if you want to pre-configure it.
+    - On initial launch, users must enter their configuration (API Keys) or place a `cv_processing_settings.json` file in the same directory for pre-configuration.
 
 ## Troubleshooting
-- **Build Fails?** Check the "Actions" logs to see if a specific requirement failed to install.
-- **App Crashes?** Run the `.exe` from a command prompt (`cmd.exe`) to see error messages.
+- **Build Failures**: Examine the Actions logs to identify any dependencies that failed to install.
+- **Application Issues**: Execute the `.exe` from a Command Prompt (`cmd.exe`) to view diagnostic output.

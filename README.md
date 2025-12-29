@@ -2,7 +2,7 @@
 
 A comprehensive CV processing system that automates candidate analysis using AI and OCR technology. This application retrieves CVs from Recruitee, processes them with advanced text extraction and AI analysis, and uploads structured tags back to the recruitment platform.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### For End Users (Non-Technical)
 1. **Download** the latest executable from releases
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python cv_processing_gui.py
 ```
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -33,7 +33,7 @@ python cv_processing_gui.py
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+## Overview
 
 ### What It Does
 The Recruitee Tagger V3.0 automates the tedious process of analyzing CVs by:
@@ -51,30 +51,30 @@ The Recruitee Tagger V3.0 automates the tedious process of analyzing CVs by:
 - **Accuracy**: AI-powered extraction reduces human error
 - **Scalability**: Handle large recruitment campaigns efficiently
 
-## ✨ Features
+## Features
 
 ### Core Functionality
-- 🔍 **Smart CV Retrieval**: Automatically finds untagged candidates
-- 📄 **PDF Processing**: Handles various PDF formats and layouts
-- 🤖 **AI Analysis**: Extracts education, experience, skills, and more
-- 📊 **Excel Reporting**: Generates detailed analysis reports
-- 🔄 **Recruitee Integration**: Seamless upload of structured tags
+- **Smart CV Retrieval**: Automatically finds untagged candidates
+- **PDF Processing**: Handles various PDF formats and layouts
+- **AI Analysis**: Extracts education, experience, skills, and more
+- **Excel Reporting**: Generates detailed analysis reports
+- **Recruitee Integration**: Seamless upload of structured tags
 
 ### User Interface
-- 🖥️ **Modern GUI**: Clean, intuitive PyQt6 interface
-- 📈 **Real-time Progress**: Live updates during processing
-- ⚙️ **Configuration Management**: Save and load settings
-- 🔒 **Secure Storage**: Encrypted API key handling
-- 📋 **Preview Mode**: Review results before upload
+- **Modern GUI**: Clean, intuitive PyQt6 interface
+- **Real-time Progress**: Live updates during processing
+- **Configuration Management**: Save and load settings
+- **Secure Storage**: Encrypted API key handling
+- **Preview Mode**: Review results before upload
 
 ### Technical Features
-- 🧵 **Multi-threading**: Non-blocking GUI during processing
-- 🛡️ **Error Handling**: Robust error recovery and logging
-- 🔄 **Retry Logic**: Automatic retry for failed operations
-- 📁 **File Management**: Organized output and temporary files
-- 🚀 **PyInstaller Ready**: Easy deployment as standalone executable
+- **Multi-threading**: Non-blocking GUI during processing
+- **Error Handling**: Robust error recovery and logging
+- **Retry Logic**: Automatic retry for failed operations
+- **File Management**: Organized output and temporary files
+- **PyInstaller Ready**: Easy deployment as standalone executable
 
-## 💻 System Requirements
+## System Requirements
 
 ### Minimum Requirements
 - **OS**: Windows 10/11 (64-bit)
@@ -93,7 +93,7 @@ The Recruitee Tagger V3.0 automates the tedious process of analyzing CVs by:
 - **PyQt6**: Latest version
 - **Dependencies**: See requirements.txt
 
-## 📦 Installation
+## Installation
 
 ### Option 1: Standalone Executable (Recommended for Users)
 1. Download `Recruitee_Tagger_V3.exe` from releases
@@ -130,7 +130,7 @@ python build_exe.py
 pyinstaller cv_processing_gui.spec
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### API Keys Setup
 
@@ -160,7 +160,7 @@ pyinstaller cv_processing_gui.spec
 - API keys are encrypted and stored locally
 - Configuration persists between application restarts
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Step-by-Step Process
 
@@ -224,18 +224,18 @@ pyinstaller cv_processing_gui.spec
 - Provides upload confirmation
 - **Duration**: 2-5 seconds per candidate
 
-## 🔧 Technical Documentation
+## Technical Documentation
 
 ### Architecture Overview
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   GUI Layer     │    │  Processing     │    │   API Layer     │
-│   (PyQt6)       │◄──►│   Thread        │◄──►│  (Recruitee/    │
+│   (PyQt6)       │<-->│   Thread        │<-->│  (Recruitee/    │
 │                 │    │                 │    │   Mistral)      │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
-         ▼                       ▼                       ▼
+         v                       v                       v
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │ Configuration   │    │ File Management │    │ Error Handling  │
 │ Management      │    │ (PDF/Excel)     │    │ & Logging       │
@@ -271,14 +271,14 @@ pyinstaller cv_processing_gui.spec
 ### Data Flow
 
 ```
-1. GUI Configuration → API Keys & Settings
-2. Start Processing → Thread Initialization
-3. Recruitee API → Candidate List
-4. PDF Download → Local Storage
-5. OCR Processing → Text Extraction
-6. AI Analysis → Structured Data
-7. Excel Generation → Output File
-8. Recruitee Upload → Tag Updates
+1. GUI Configuration -> API Keys & Settings
+2. Start Processing -> Thread Initialization
+3. Recruitee API -> Candidate List
+4. PDF Download -> Local Storage
+5. OCR Processing -> Text Extraction
+6. AI Analysis -> Structured Data
+7. Excel Generation -> Output File
+8. Recruitee Upload -> Tag Updates
 ```
 
 ### Error Handling Strategy
@@ -298,7 +298,7 @@ pyinstaller cv_processing_gui.spec
 - **Authentication**: Clear error messages
 - **Data Validation**: Input sanitization
 
-## 🔌 API Integration
+## API Integration
 
 ### Recruitee API
 
@@ -336,7 +336,7 @@ client = Mistral(api_key=api_key)
 - **Default delay**: 2 seconds
 - **Configurable**: 1-60 seconds
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -407,7 +407,7 @@ console=True  # Change from False to True
 - Review error messages in GUI
 - Monitor network activity
 
-## 🚀 Deployment
+## Deployment
 
 ### Building Executable
 
@@ -452,7 +452,7 @@ pyinstaller cv_processing_gui.spec
 - **Migration scripts**: Automated configuration updates
 - **Rollback support**: Previous version availability
 
-## 🤝 Contributing
+## Contributing
 
 ### Development Setup
 1. **Fork** the repository
@@ -479,9 +479,8 @@ python -m pytest --cov=.
 python -m pytest tests/test_gui.py
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the ORMIT TALENT & MARC VAN KAMPEN
 
-*Built with ❤️ 
 # CV_TAG_2
