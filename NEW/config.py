@@ -1,0 +1,230 @@
+"""
+Configuration module for the CV Processing System.
+
+Centralizes all configuration values, allowed tag values, and path definitions.
+"""
+
+from pathlib import Path
+
+# --- Directory Configuration ---
+BASE_DIR = Path(__file__).parent
+DOWNLOADED_CVS_DIR = BASE_DIR / "downloaded_cvs"
+OCR_TEXTS_DIR = BASE_DIR / "ocr_texts"
+OUTPUT_DIR = BASE_DIR / "output"
+
+# Ensure directories exist
+DOWNLOADED_CVS_DIR.mkdir(parents=True, exist_ok=True)
+OCR_TEXTS_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+# --- Default Settings ---
+DEFAULT_COMPANY_ID = "24899"
+DEFAULT_CANDIDATE_LIMIT = 10
+DEFAULT_DELAY_SECONDS = 2
+
+# --- Mistral Model Configuration ---
+OCR_MODEL = "mistral-ocr-latest"
+LLM_MODEL = "mistral-large-latest"
+
+# --- Allowed Tag Values ---
+ALLOWED_SCHOOLS = [
+    "Katholieke Universiteit Leuven",
+    "Université Catholique Louvain",
+    "Louvain School Management",
+    "Vrije Universiteit Brussel",
+    "Université Libre Bruxelles",
+    "Vlerick Business School",
+    "Solvay Brussels School - Economics & Management",
+    "ICHEC Brussels Management School",
+    "Brussels School Ihecs Journalism & Communication",
+    "Université Saint-Louis",
+    "Haute Ecole Francisco Ferrer",
+    "European Communication School",
+    "EHSAL Management School Brussel",
+    "HEC Liège",
+    "Université de Liège",
+    "Université de Mons",
+    "Université de Namur",
+    "Antwerp Management School",
+    "Universiteit Antwerpen",
+    "Universiteit Gent",
+    "Universiteit Hasselt",
+    "College of Europe",
+    "Economic School of Louvain",
+    "École polytechnique de Louvain",
+    "ECAM Brussels Engineering School",
+    "United International Business Schools",
+    "Antwerp Maritime Academy",
+    "PXL Hasselt",
+    "Thomas More",
+    "UCLL (UC Leuven-Limburg)",
+    "Odisee",
+    "Kedge Business School Bordeaux",
+    "Katholieke Hogeschool Sint-Lieven",
+    "ECS - European Communication School",
+    "Haute Ecole Libre de Bruxelles Ilya Prigogine",
+    "EPFC",
+    "Artevelde",
+    "Haute Ecole Ephec",
+    "HoGent",
+    "Erasmus Hogeschool Brussel",
+    "Haute Ecole en Hainaut",
+    "HE2B ESI",
+    "EPFL",
+    "ECSEDI - ISALT Galilée",
+    "ESA Saint-Luc",
+    "Howest",
+    "Hogeschool VIVES",
+    "Henallux",
+    "Sint Lucas Antwerpen",
+    "Abroad",
+]
+
+ALLOWED_FIELDS_OF_STUDY = [
+    "Urban Planning",
+    "Architecture",
+    "Design",
+    "History",
+    "Linguistics & Literature",
+    "Media & Entertainment",
+    "Music & Film",
+    "Philosophy",
+    "Business",
+    "Data in business",
+    "Economics",
+    "Finance",
+    "Human Resources Management",
+    "International Business",
+    "IT in business",
+    "Marketing",
+    "Sales & Marketing",
+    "Supply Chain",
+    "Sustainability",
+    "Aerospace Engineering",
+    "Bioscience Engineering",
+    "Chemical Engineering",
+    "Civil Engineering",
+    "Computer Science",
+    "Data Science",
+    "Electrical Engineering",
+    "Environmental Engineering",
+    "Food Technology",
+    "Industrial Engineering",
+    "Information Technology",
+    "Mechanical Engineering",
+    "Nuclear Engineering",
+    "Audiology",
+    "Dentistry",
+    "Health Technology",
+    "Medicine",
+    "Nutritional Sciences",
+    "Life Sciences",
+    "Occupational Therapy",
+    "Orthotics and Prosthetics",
+    "Pharmaceutical Sciences",
+    "Physiotherapy",
+    "Sport Sciences",
+    "Criminology",
+    "Law",
+    "Business Management",
+    "Engineering & Technology",
+    "Events & Facility",
+    "Healthcare",
+    "Hospitality",
+    "Other",
+    "Sport & Culture",
+    "Psychology",
+    "Education Sciences",
+    "Biology",
+    "Chemistry",
+    "Environmental Sciences",
+    "Mathematics",
+    "Physics",
+    "Anthropology",
+    "Archaeology",
+    "Communication",
+    "Cultural Studies",
+    "Geography",
+    "International Relations",
+    "Political Science",
+    "Public Relations",
+    "Social Work",
+    "Sociology",
+    "Theology",
+]
+
+ALLOWED_GENDERS = ["Female", "Male"]
+
+ALLOWED_EDUCATION_LEVELS = [
+    "ManaMa",
+    "Master",
+    "BanaBa",
+    "Academic Bachelor",
+    "Professional Bachelor",
+    "Secondary level",
+]
+
+ALLOWED_EXPERIENCE = [
+    "0-0.5y exp",
+    "0.5-1y exp",
+    "1-1.5y exp",
+    "1.5-2y exp",
+    "2-2.5y exp",
+    "2.5-3y exp",
+    "3-3.5y exp",
+    "3.5-4y exp",
+    ">4y exp",
+    ">5y exp",
+    ">6y-10 exp",
+    "10y-15y exp",
+    "15y-20y exp",
+    ">20y exp",
+]
+
+ALLOWED_MOTHER_TONGUES = [
+    "Dutch",
+    "French",
+    "Spanish",
+    "Italian",
+    "Portuguese",
+    "Romanian",
+    "English",
+    "German",
+    "Swedish",
+    "Danish",
+    "Norwegian",
+    "Russian",
+    "Polish",
+    "Ukrainian",
+    "Czech",
+    "Slovak",
+    "Mandarin Chinese",
+    "Japanese",
+    "Korean",
+    "Vietnamese",
+    "Indonesian",
+    "Thai",
+    "Arabic",
+    "Icelandic",
+    "Finnish",
+    "Lithuanian",
+    "Latvian",
+    "Turkish",
+    "Persian (Farsi)",
+    "Greek",
+    "Hebrew",
+    "Telugu",
+    "Albanian",
+    "Tagalog",
+    "Chinese",
+    "Bulgarian",
+    "Amazigh",
+    "Nepali",
+    "Bangla",
+    "Kazakh",
+    "Catalan",
+    "Azerbaijani",
+    "Afrikaans",
+    "Punjabi",
+    "Kabyle",
+]

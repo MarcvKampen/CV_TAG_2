@@ -1,0 +1,17 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!README.md
+
+# And not the NEW folder and its contents
+!NEW/
+!NEW/**
+!.github/
+!.github/**
+
+# Ignore specific files within NEW if needed
+NEW/__pycache__/
+NEW/*.pyc
+NEW/.DS_Store

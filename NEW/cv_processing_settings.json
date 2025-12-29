@@ -1,0 +1,9 @@
+{
+  "recruitee_api_key": "WGwvYk5vMFg2bEdpTEl0R3VhUmtBdz09",
+  "mistral_api_key": "M52OOgs5jT3s0DsTXSdbyRwHUdQklaxv",
+  "company_id": "24899",
+  "candidate_limit": 5,
+  "delay_seconds": 2,
+  "upload_to_recruitee": true,
+  "generate_excel": true
+}
